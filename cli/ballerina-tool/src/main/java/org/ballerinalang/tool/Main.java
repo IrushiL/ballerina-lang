@@ -72,6 +72,8 @@ public class Main {
             errStream.println(getMessageForInternalErrors());
             RuntimeUtils.silentlyLogBadSad(e);
             Runtime.getRuntime().exit(1);
+        } finally {
+            Runtime.getRuntime().exit(0);
         }
     }
 
