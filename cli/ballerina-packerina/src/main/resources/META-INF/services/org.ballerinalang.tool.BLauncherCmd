@@ -8,5 +8,4 @@ org.ballerinalang.packerina.cmd.AddCommand
 org.ballerinalang.packerina.cmd.SearchCommand
 org.ballerinalang.packerina.cmd.CleanCommand
 org.ballerinalang.packerina.cmd.TestCommand
-org.ballerinalang.packerina.cmd.InteropGenCommand
 
