@@ -1,0 +1,47 @@
+NAME
+       ballerina-bbgen - A tool for generating Ballerina bindings to Java APIs.
+
+SYNOPSIS
+       ballerina bbgen --jar <jar-file-path> [--output <path>]
+       ballerina bbgen --mvn=<groupId>:<artifactId>:<version> [--output <path>]
+       ballerina bbgen <-cn|--class-name>=<class-name>... [--output <path>]
+
+
+DESCRIPTION
+       A CLI tool for generating Ballerina bridge code for Java APIs.
+
+       Ballerina bindings could be generated for jars, maven dependencies
+       and standard Java classes.
+
+       A jar file could be pointed using the --jar option, whereas a
+       maven dependency could be provided using the --mvn option.
+
+       If the bridge code is to be generated for standard Java classes, the
+       --class-name option could be provided.
+
+
+OPTIONS
+       --jar <jar-file-path>
+       Path to the jar file from which the bridge code is to be generated.
+
+       --mvn <groupId>:<artifactId>:<version>
+       Maven dependency details for which the bridge code is to be generated.
+
+       <-cn|--class-name>=<class-name>...
+       Provide one or more comma-delimited fully qualified names of Java
+       standard library classes for which the bridge code is to be generated.
+
+       --output <path>
+       Location for generated Ballerina bridge code. If this path is not
+       specified, the output will be written in the same directory the command is run.
+
+
+EXAMPLES
+       Generating the Ballerina bridge code for a Java based library.
+            $ ballerina bbgen --jar lib/snakeyaml-1.25.jar
+
+       Generating the Ballerina bridge code for a Maven dependency.
+            $ ballerina bbgen --mvn org.yaml:snakeyaml:1.25
+
+       Generating Ballerina bridge code for standard Java classes.
+            $ ballerina bbgen --class-name=java.util.Collection,java.util.HashSet

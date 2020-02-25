@@ -88,6 +88,7 @@ dependencies {
     dist 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.5'
 
     dist project(':ballerina-cli-utils')
+    dist project(':ballerina-bbgen-tool')
     dist project(':ballerina-tool')
     dist project(':ballerina-jvm')
     birJar project(path: ':ballerina-jvm', configuration: 'birJar')
